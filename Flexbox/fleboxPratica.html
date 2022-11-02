@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de exemplo de estrutura básica</title>
+    <style>
+        .cardContainer {
+            display: flex;
+        }
+
+        .cardFlex {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            width: 30%;
+            padding: 10px;
+            margin: 1%;
+        }
+
+        .cardFlex p {
+            flex-grow: 1;
+        }
+
+        .cardFlex button {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Display Flex</h2>
+
+    <p>Acomodar ou distribuir elementos de modo fácil</p>
+
+    <p>Ajuda a centralizar na vertical</p>
+
+    <section class="cardContainer">
+        <article class="cardFlex">
+            <h3>título</h3>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat voluptas ipsam quasi tempora voluptatem deserunt quo eum mollitia tempore architecto.</p>
+
+            <button>Vai</button>
+        </article>
+
+        <article class="cardFlex">
+            <h3>título</h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam totam nostrum quaerat voluptatibus, modi esse quidem laudantium hic vitae quae est amet nobis sapiente? Ratione libero maxime placeat laborum quidem!</p>
+
+            <button>Vai</button>
+        </article>
+
+        <article class="cardFlex">
+            <h3>título</h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, doloremque.</p>
+
+            <button>Vai</button>
+        </article>
+    </section>
+</body>
+</html>
