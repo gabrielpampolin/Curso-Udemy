@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu CSS Não funciona</title>
+    <style>
+        p[lang] {
+            color: black;
+        }
+
+        #unico {
+            color: blue;
+        }
+
+        p.destaque {
+            color: orange;
+        }
+
+        .destaque {
+            color: red;
+        }
+
+        p {
+            color: green !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Meu CSS Não funciona</h1>
+
+    <p style="color: yellow;">Com estilo inline</p>
+
+    <p lang="pt-br" class="destaque">testando atributos</p>
+
+    <p class="destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, aspernatur sequi. Voluptatibus nemo eos sapiente aperiam magni repellat! Omnis, aliquam? Eum et maiores temporibus officiis ratione vitae, illo nihil perspiciatis.</p>
+
+    <p class="destaque" id="unico">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni sapiente sint consequuntur suscipit blanditiis, asperiores nesciunt eaque vel praesentium, deleniti, ipsa magnam enim accusantium rerum quibusdam a dolorem aspernatur eius?</p>
+
+    <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aspernatur odio itaque incidunt voluptas ducimus aliquam dolor placeat, minima, ex rerum et autem exercitationem facere dolorem saepe harum ullam nemo?</p>
+</body>
+</html>
