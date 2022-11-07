@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu CSS Não funciona</title>
     <style>
-        p[lang] {
+        /* p[lang] {
             color: black;
         }
 
@@ -21,10 +21,26 @@
 
         .destaque {
             color: red;
+        } */
+
+        /* p {
+            color: green !important;
+        } */
+
+        .jumbotron {
+            background: rgba(0, 0, 0, .5);
+        }
+
+        .jumbotron__text {
+            color: white;
+        }
+
+        .jumbotron__title {
+            color: red;
         }
 
         p {
-            color: green !important;
+            color: red;
         }
     </style>
 </head>
@@ -32,7 +48,13 @@
 <body>
     <h1>Meu CSS Não funciona</h1>
 
-    <p style="color: yellow;">Com estilo inline</p>
+    <div class="jumbotron">
+        <h2 class="jumbotron__title">subtitulo</h2>
+        <p class="jumbotron__text">paragrafos</p>
+        <p class="jumbotron__text">paragrafos</p>
+    </div>
+
+    <p style="color: blue;">Com estilo inline</p>
 
     <p lang="pt-br" class="destaque">testando atributos</p>
 
