@@ -14,8 +14,19 @@
     <script>
         document.write('Anos bissextos<br>')
         document.write('-------- // --------<br>')
-        for(var ano = 1000; ano <= 2024; ano+=4) {
-            document.write(ano + '<br>');
+        // for(var ano = 1000; ano <= 2024; ano+=4) {
+        //     document.write(ano + '<br>');
+        // }
+
+        var ano = 1004;
+
+        while(ano <= 2024) {   
+            if( !(ano % 100 === 0) || (ano % 400 ===0 ) ) {
+                document.write(ano + '<br>');
+            } else {
+                document.write(ano + ' não é bissexto <br>')
+            }
+            ano += 4
         }
     </script>
 </body>
