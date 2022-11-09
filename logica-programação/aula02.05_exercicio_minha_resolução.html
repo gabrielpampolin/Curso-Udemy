@@ -12,25 +12,25 @@
     <h1>Logica de Programação Javascript</h1>
 
     <script>
-        var p1 = parseFloat(prompt("Digite um número: "));
+        var nJogador1 = parseInt(prompt("Jogador 1 digite um número: "));
 
-        var p2 = parseFloat(prompt("Digite outro número: "));
+        var nJogador2 = parseInt(prompt("Jogador 2 digite um número: "));
 
-        if (p1 == p2) {
-            alert("Empate!")
+        if (nJogador1 == nJogador2) {
+            alert("Vocês empataram!")
         } else if(parseInt(Math.random() * 2) == 0) {
             alert("O número gerado foi 0, vence o menor número escolhido")
-            if (p1 < p2) {
-                alert("Parabens você venceu P1, seu número foi: " + p1)
+            if (nJogador1 < nJogador2) {
+                alert("Parabens você venceu Jogador 1, seu número foi: " + nJogador1)
             } else {
-                alert("Parabens você venceu P2, seu número foi: " + p2)
+                alert("Parabens você venceu Jogador 2, seu número foi: " + nJogador2)
             }
         } else {
             alert("O número gerado foi 1, vence o maior número escolhido!")
-            if (p1 > p2) {
-                alert("Parabens você venceu P1, seu número foi: " + p1)
+            if (nJogador1 > nJogador2) {
+                alert("Parabens você venceu Jogador 1, seu número foi: " + nJogador1)
             } else {
-                alert("Parabens você venceu P1, seu número foi: " + p2)
+                alert("Parabens você venceu Jogador 2, seu número foi: " + nJogador2)
             }
         }
     </script>
