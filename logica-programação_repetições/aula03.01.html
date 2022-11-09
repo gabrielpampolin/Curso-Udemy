@@ -14,12 +14,31 @@
     <script>
         var numero = Number(prompt('digite um número '));
 
-        var indice = 1;
+        var indice = 1001;
 
+        //WHILE
+        /*
         while(indice <= 1000) {
             document.write( numero + ' x ' + indice + ' = ' + (numero * indice) + ' <br> ');
 
             indice = indice + 1;
+        }
+        document.write('Saiu do loop');
+        */
+
+        //DO WHILE
+        /*
+        do {
+            document.write( numero + ' x ' + indice + ' = ' + (numero * indice) + ' <br> ');
+
+            indice = indice + 1;
+        } while(indice <= 1000)
+        document.write('Saiu do loop');
+        */
+
+        //FOR
+        for(i=0; i<=1000; i++) {
+            document.write(numero + ' x ' + i + ' = ' + (numero * i) + ' <br> ')
         }
         document.write('Saiu do loop');
     </script>
