@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação Javascript</title>
+</head>
+
+<body>
+    <h1>Logica de Programação Javascript</h1>
+
+    <script>
+        var nJogador1 = parseInt(prompt("Jogador 1 digite um número: "));
+
+        var nJogador2 = parseInt(prompt("Jogador 2 digite um número: "));
+
+        var nSorteado = parseInt(Math.random() * 2);
+
+        if (nJogador1 == nJogador2) {
+            alert("Vocês empataram!")
+        } else if( (nSorteado == 0 && nJogador1 < nJogador2) || (nSorteado == 1 && nJogador1 > nJogador2) ) {
+            alert("O número sorteado foi: " + nSorteado + ", se for 0, o jogador com o menor número vence, se for 1, é o oposto.")
+            alert("Parabens você venceu Jogador 1, seu número foi: " + nJogador1)
+        } else {
+            alert("O número sorteado foi: " + nSorteado + ", se for 0, o jogador com o menor número vence, se for 1, é o oposto.")
+            alert("Parabens você venceu Jogador 2, seu número foi: " + nJogador2)
+        }
+    </script>
+</body>
+</html>
