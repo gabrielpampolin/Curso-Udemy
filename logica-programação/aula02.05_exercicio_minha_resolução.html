@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação Javascript</title>
+</head>
+
+<body>
+    <h1>Logica de Programação Javascript</h1>
+
+    <script>
+        var p1 = parseFloat(prompt("Digite um número: "));
+
+        var p2 = parseFloat(prompt("Digite outro número: "));
+
+        if (p1 == p2) {
+            alert("Empate!")
+        } else if(parseInt(Math.random() * 2) == 0) {
+            alert("O número gerado foi 0, vence o menor número escolhido")
+            if (p1 < p2) {
+                alert("Parabens você venceu P1, seu número foi: " + p1)
+            } else {
+                alert("Parabens você venceu P2, seu número foi: " + p2)
+            }
+        } else {
+            alert("O número gerado foi 1, vence o maior número escolhido!")
+            if (p1 > p2) {
+                alert("Parabens você venceu P1, seu número foi: " + p1)
+            } else {
+                alert("Parabens você venceu P1, seu número foi: " + p2)
+            }
+        }
+    </script>
+</body>
+</html>
