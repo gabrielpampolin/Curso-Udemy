@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação Javascript</title>
+</head>
+
+<body>
+    <h1>Logica de Programação Javascript</h1>
+
+    <div id="output"></div>
+
+    <button onclick="mostrarArea()">Area Total</button>
+
+    <script>
+        var n1 = Number(prompt("Digite um número: "));
+
+        var n2 = Number(prompt("Digite outro número: "));
+
+        function mostrarArea() {
+            var r = n1 * n2;
+
+            output.innerHTML = 'A área total do retângulo é de: ' + r +'M²';
+        }
+
+        var output = document.querySelector('#output');
+
+        var mensagem = 'o primeiro lado do retângulo é: ' + n1 + ', O segundo lado é: ' + n2;
+        output.innerHTML = mensagem;
+    </script>
+</body>
+</html>
