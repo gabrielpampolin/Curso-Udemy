@@ -13,22 +13,20 @@
 
     <div id="output"></div>
 
-    <button onclick="mostrarArea()">Area Total</button>
+    <button onclick="mostrarArea(largura, altura)">Area Total</button>
 
     <script>
-        var n1 = Number(prompt("Digite um número: "));
+        var largura = Number(prompt("Digite a largura: "));
 
-        var n2 = Number(prompt("Digite outro número: "));
+        var altura = Number(prompt("Digite a altura: "));
 
-        function mostrarArea() {
-            var r = n1 * n2;
-
-            output.innerHTML = 'A área total do retângulo é de: ' + r +'M²';
+        function mostrarArea(l, a) {
+            output.innerHTML = 'A área total do retângulo é de: ' + (l * a) +'M²';
         }
 
         var output = document.querySelector('#output');
 
-        var mensagem = 'o primeiro lado do retângulo é: ' + n1 + ', O segundo lado é: ' + n2;
+        var mensagem = 'A largura do retângulo é: ' + largura + ', A altura do retângulo é: ' + altura;
         output.innerHTML = mensagem;
     </script>
 </body>
