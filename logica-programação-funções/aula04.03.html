@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação Javascript</title>
+</head>
+
+<body>
+    <h1>Logica de Programação Javascript</h1>
+
+    <button onclick="mostrarAreaAlert(largura, altura)">Area Total alert</button>
+    
+    <button onclick="mostrarAreaOutput(largura, altura)">Area Total output</button>
+
+    <div id="output"></div>
+
+    <script>
+        var largura = Number(prompt("Digite a largura: "));
+
+        var altura = Number(prompt("Digite a altura: "));
+
+        function mostrarAreaOutput(l, a) {
+            var area = calcularArea(largura, altura);
+
+            output.innerHTML = 'A área total do retângulo é de: ' + area +'M²';
+        }
+
+        function mostrarAreaAlert(l, a) {
+            var area = calcularArea(largura, altura);
+
+            alert('a área total é: ' + area);
+        }
+
+        function calcularArea(l, a) {
+            return l * a;
+        }
+
+        document.querySelector('#output').innerHTML = 'A largura do retângulo é: ' + largura + ', A altura do retângulo é: ' + altura;;
+    </script>
+</body>
+</html>
