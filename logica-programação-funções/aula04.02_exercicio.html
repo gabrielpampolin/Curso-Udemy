@@ -73,7 +73,7 @@
     <div class="calculator">
         <div class="display" id="output">0</div>
 
-        <button>AC</button> <button>%</button> <button onclick="calcular('*')">x</button> <button onclick="calcular('/')">/</button>
+        <button onclick="numero('AC')">AC</button> <button>%</button> <button onclick="calcular('*')">x</button> <button onclick="calcular('/')">/</button>
         <button onclick="numero('7')">7</button> <button onclick="numero('8')">8</button> <button onclick="numero('9')">9</button> <button onclick="calcular('=')">=</button>
         <button onclick="numero('4')">4</button> <button onclick="numero('5')">5</button> <button onclick="numero('6')">6</button> <button onclick="calcular('-')">-</button>
         <button onclick="numero('1')">1</button> <button onclick="numero('2')">2</button> <button onclick="numero('3')">3</button> <button class="mais" onclick="calcular('+')">+</button>
@@ -119,35 +119,38 @@
         function numero(numeros) {
             var n = 0;
             switch(numeros) {
-                case '0':
+                case 'AC':
                     num = 0;
                     break;
+                case '0':
+                    num *= 10;
+                    break;
                 case '1':
-                    num = 1;
+                    num += 1;
                     break;
                 case '2':
-                    num = 2;
+                    num += 2;
                     break;
                 case '3':
-                    num = 3;
+                    num += 3;
                     break;
                 case '4':
-                    num = 4;
+                    num += 4;
                     break;
                 case '5':
-                    num = 5;
+                    num += 5;
                     break;
                 case '6':
-                    num = 6;
+                    num += 6;
                     break;
                 case '7':
-                    num = 7;
+                    num += 7;
                     break;
                 case '8':
-                    num = 8;
+                    num += 8;
                     break;   
                 case '9':
-                    num = 9;
+                    num += 9;
                     break; 
             }
 
