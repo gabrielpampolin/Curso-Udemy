@@ -14,18 +14,29 @@
     <div id="output"></div>
 
     <script>
-        var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+        let numeros = new Array(25, 30, 45, 28, 0, 12, 78, 64,);
 
-        var output = document.querySelector('#output');
+        let output = document.querySelector('#output');
 
-        var result = 0;
+        let somaDosPares = somaOsPares(numeros);
 
-        for(var i = 0; i < arr.length; i++){
-            if(arr[i] % 2 == 0) {
-                result = result + arr[i];
+        output.innerHTML = ('o resultado da soma dos números pares é: ' + somaDosPares);
+
+        function somaOsPares(arr) {
+            let resultado = 0;
+
+            for(let i = 0; i < arr.length; i++){
+
+                if( !isNaN(arr[i]) && arr[i] % 2 == 0 ) {
+
+                    resultado += arr[i];
+
+                }
+                
             }
+
+            return resultado;
         }
-        alert('o resultado da soma dos números pares é: ' + result);
     </script>
 </body>
 </html>
