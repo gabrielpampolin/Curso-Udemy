@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação Javascript</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .calculator {
+            width: 200px;
+            background-image: linear-gradient(#b7b7b7, #9c9c9c);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+            border-radius: 5px;
+            margin: 15px auto;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto repeat(5, 40px);
+            gap: 5px;
+        }
+
+        .display {
+            padding: 10px;
+            font-size: 1.4em;
+            text-align: right;
+            background-image: linear-gradient(#c5c5c5, #e0e0e0);
+            box-shadow: inset 3px 2px 0 white;
+            margin-bottom: 15px;
+
+            grid-column: 1 / -1;
+        }
+
+        button {
+            padding: .25em;
+            border: none;
+            box-shadow: inset 2px 2px 0 white;
+        }
+
+        button:hover {
+            background-image: linear-gradient(#c5c5c5, #e0e0e0);
+        }
+
+        .zero {
+            grid-column: 1 / 3;
+            background-color: #adadad;
+        }
+
+        .zero:hover {
+            background-image: linear-gradient(#c5c5c5, #e0e0e0);
+        }
+
+        .mais {
+            grid-row: 5 / 7;
+            grid-column: 4 / 5;
+            background-color: #adadad; 
+        }
+
+        .mais:hover {
+            background-image: linear-gradient(#c5c5c5, #e0e0e0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display" id="output">0</div>
+
+        <button onclick="iniciarCalculoString('AC')">AC</button> <button>%</button> <button onclick="iniciarCalculo('*')">x</button> <button onclick="iniciarCalculo('/')">/</button>
+        <button onclick="iniciarCalculoString('7')">7</button> <button onclick="iniciarCalculoString('8')">8</button> <button onclick="iniciarCalculoString('9')">9</button> <button>=</button>
+        <button onclick="iniciarCalculoString('4')">4</button> <button onclick="iniciarCalculoString('5')">5</button> <button onclick="iniciarCalculoString('6')">6</button> <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculoString('1')">1</button> <button onclick="iniciarCalculoString('2')">2</button> <button onclick="iniciarCalculoString('3')">3</button> <button class="mais" onclick="iniciarCalculo('+')">+</button>
+        <button class="zero" onclick="iniciarCalculoString('0')">0</button> <button>,</button>
+    </div>
+
+    <script>
+        var n2 = 0;
+
+        escreve(n2);
+
+        function iniciarCalculo(simbolo) {
+            var n1 = Number(document.querySelector('#output').textContent);
+
+            var n2 = parseFloat(prompt('Digite outro número: '));
+
+            try {
+                var msg = calcular(simbolo, n1, n2);
+            } catch(e) {
+                alert(e);
+                return 0;
+            }
+
+            escreve(msg);
+        }
+
+        function iniciarCalculoString(simbolo) {
+            var n1 = document.querySelector('#output').textContent;
+
+            var n2 = 0;
+
+            try {
+                var msg = calcular(simbolo, n1, n2);
+            } catch(e) {
+                alert(e);
+                return 0;
+            }
+
+            escreve(msg);
+        }
+
+        function escreve(mensagem) {
+            var output = document.querySelector('#output');
+
+            output.innerHTML = mensagem;
+        }
+
+        function calcular(simbolo, n1, n2) {
+
+            if(simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/' && simbolo !== 'AC' && simbolo !== '0' && simbolo !== '1' && simbolo !== '2' && simbolo !== '3' && simbolo !== '4' && simbolo !== 'x' && simbolo !== '5' &&simbolo !== '6' && simbolo !== '7' && simbolo !== '8' && simbolo !== '9') {
+                throw new Error('Digite um símbolo válido');
+                return;
+            }
+
+            if(isNaN(n1) || isNaN(n2)) {
+                throw new Error('Chama passando somente números');
+                return;
+            }
+
+            var numeroCalculado = null;
+
+            switch(simbolo) {
+                case 'AC':
+                    numeroCalculado = 0;
+                    break;
+                case '0':
+                    numeroCalculado = n1 + 0;
+                    break;
+                case '1':
+                    numeroCalculado = n1 + 1;
+                    break
+                case '2':
+                    numeroCalculado = n1 + 2;
+                    break
+                case '3':
+                    numeroCalculado = n1 + 3;
+                    break
+                case '4':
+                    numeroCalculado = n1 + 4;
+                    break
+                case '5':
+                    numeroCalculado = n1 + 5;
+                    break
+                case '6':
+                    numeroCalculado = n1 + 6;
+                    break
+                case '7':
+                    numeroCalculado = n1 + 7;
+                    break
+                case '8':
+                    numeroCalculado = n1 + 8;
+                    break
+                case '9':
+                    numeroCalculado = n1 + 9;
+                    break
+                case '+':
+                    numeroCalculado = n1 + n2;
+                    break;
+                case '-':
+                    numeroCalculado = n1 - n2;
+                    break;
+                case '*':
+                    numeroCalculado = n1 * n2;
+                    break;
+                case '/':
+                    numeroCalculado = n1 / n2;
+                    break;
+            }
+
+            return numeroCalculado;
+
+        }
+    </script>
+</body>
+</html>

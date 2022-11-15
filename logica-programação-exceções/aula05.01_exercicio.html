@@ -23,22 +23,38 @@
         var altura = Number(prompt("Digite a altura: "));
 
         function mostrarAreaOutput(l, a) {
-            var area = calcularArea(largura, altura);
+            try {
+                var area = calcularArea(largura, altura);
+            } catch (e) {
+                area = e;
+            }
 
-            output.innerHTML = 'A área total do retângulo é de: ' + area;
+            output.innerHTML = 'A área total do retângulo é de ' + area;
         }
 
         function mostrarAreaAlert(l, a) {
-            var area = calcularArea(largura, altura);
+            try {
+                var area = calcularArea(largura, altura);
+            } catch (e) {
+                area = e;
+            }
 
             alert('a área total é: ' + area);
         }
 
         function calcularArea(l, a) {
+            if(l === undefined || a === undefined) {
+                throw new Error('calcularArea precisa receber dpos números.');
+            }
+
+            if(isNaN(l) || isNaN(a)) {
+                throw new Error('Apenas números.')
+            }
+
             return l * a;
         }
 
-        document.querySelector('#output').innerHTML = 'A largura do retângulo é: ' + largura + ', A altura do retângulo é: ' + altura;;
+        mostrarAreaAlert();
     </script>
 </body>
 </html>
