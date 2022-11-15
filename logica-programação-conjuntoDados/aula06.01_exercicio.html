@@ -14,20 +14,25 @@
     <div id="output"></div>
 
     <script>
-        var produtos = new Array('caneta', 'lapis', 'tesoura', 'borracha', 'caderno', 'livro');
+        var dias = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado');
 
-        produtos.push('compasso', 'cartolina');
+        var hoje = new Date();
+
+        var diaSemana = hoje.getDay(); // Retorna o dia da semana
 
         var output = document.querySelector('#output');
 
-        var msg = '';
+        alert('Bem vindo, hoje é ' + dias[diaSemana]);
 
-        for(var i = 0; i < produtos.length; i++) {
-            msg += 'produto ' + (i + 1) + ': ' + produtos[i] + ' <br>';
-        }
-
-        output.innerHTML = msg;
-        
+        /*
+        0 - domingo
+        1 - segunda
+        2 - terça
+        3 - quarta
+        4 - quinta
+        5 - sexta
+        6 - sábado
+        */
     </script>
 </body>
 </html>
