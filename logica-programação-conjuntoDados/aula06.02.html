@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação Javascript</title>
+</head>
+
+<body>
+    <h1>Logica de Programação Javascript</h1>
+
+    <div id="output"></div>
+
+    <script>
+        let produto1 = new Object();
+
+        produto1.nome = "caneta";
+        produto1.estoque = 50;
+        produto1.preco = 1.5;
+
+        produto1.comprar = function(qtd) {
+            if (!qtd) {
+                qtd = 1;
+            }
+            console.log('comprou caneta');
+            //this.estoque--;
+            this.estoque = this.estoque - qtd;
+            console.log(this.estoque);
+
+            
+        }
+
+        let msg = '';
+
+        msg += 'nome: ' + produto1.nome + '<br>'
+        msg += 'preço: ' + produto1.preco + '<br>'
+        msg += 'estoque: ' + produto1.estoque + '<br>'
+        
+        document.querySelector('#output').innerHTML = msg;
+
+        
+    </script>
+</body>
+</html>
