@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação Javascript</title>
+</head>
+
+<body>
+    <h1>Logica de Programação Javascript</h1>
+
+    <div id="output"></div>
+</body>
+
+    <script>
+        // Resolução do professor
+        var pessoa1 = new Object();
+        pessoa1.nome = 'maria';
+        pessoa1.email = 'maria@server.com';
+
+        var pessoa2 = new Object();
+        pessoa2.nome = 'joao';
+        pessoa2.email = 'joao@server.com';
+
+        var pessoa3 = new Object();
+        pessoa3.nome = 'jose';
+        pessoa3.email = 'jose@server.com';
+
+        var pessoas = new Array(pessoa1, pessoa2, pessoa3)
+
+        var msg = "";
+
+        var x = 0;
+        while(pessoas[x]) {
+            msg += pessoas[x].nome + ' - ' + pessoas[x].email + '<br>';
+            
+            x++;
+        }
+
+        document.querySelector('#output').innerHTML = msg;
+
+        // Minha resolução
+
+        /*
+        let pessoas = [
+            {"nome": "Gabriel", "email": "gabriel@gmail.com"},
+            {"nome": "João", "email": "joao@gmail.com"},
+            {"nome": "Maria", "email": "maria@hotmail.com"},
+        ]
+
+        var msg = "";
+
+        for(let i = 0; i < pessoas.length; i++) {
+            msg += "<h2>Nome: " + pessoas[i].nome + "</h2>";
+            msg += "<p>Email: " + pessoas[i].email + "</p>"
+        }
+
+        document.querySelector('#output').innerHTML = msg;
+        */
+    </script>
+</html>
