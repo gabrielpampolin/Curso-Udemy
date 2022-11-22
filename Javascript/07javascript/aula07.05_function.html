@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JS</title>
+
+    <div id="output"></div>
+
+    <script>
+        document.querySelector('#output').innerHTML = msg = 'aes44877111';
+        
+        //literar
+        function somar(n1, n2) {
+            //corpo da função
+            return n1 + n2;
+        }
+
+        let soma = somar(10, 5);
+        console.log('Resultado: ' , soma);
+
+        somar.teste = 'propriedade da funcao';
+
+        console.log(somar.teste);
+
+        let teste = function abacaxi(f) {
+            f()
+        };
+
+        teste(function(){
+            console.log('funcao passada por parametro')
+        });
+
+        console.log('--------------');
+
+        let x = 0;
+        let y;
+
+        function mostrarX(){
+            let x = 10; //escopo global
+            let y = 20;
+            console.log("motra x dentro: ", x);
+            console.log("motra y dentro: ", y);
+        }
+        mostrarX();
+
+        console.log("motra x fora: ", x);
+        console.log("motra y fora: ", y);
+
+        //IIFE função auto invocavel
+        (function() {
+            'use strict';
+            let isValid = false;
+            console.log(isValid);
+
+            function somar(arr) {
+                console.log(arguments);
+
+                let result = 0;
+                var x = 0;
+
+                while(arguments[x]){
+                    // result = result + arguments[x];
+                    result += arguments[x];
+                    x++;
+                }
+
+
+                console.log('result: ', result);
+            }
+
+            somar(10, 30, 10, 5, 7, 15);
+
+        })();
+
+        
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>
