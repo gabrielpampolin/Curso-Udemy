@@ -11,7 +11,7 @@
 <body>
     <h1>Curso Javascript</h1>
 
-    <input type="text" id="txtNome"  disabled>
+    <input type="text" id="txtNome"  value="digite">
 
     <script>
         let $txt = document.getElementById('txtNome');
@@ -21,6 +21,10 @@
         
 
         document.getElementById('txtNome').value = nome + sobreNome;
+
+        // document.querySelector('#txtNome').disabled = true;
+
+        document.querySelector('#txtNome').readOnly = true;
     </script>
 </body>
 </html>
