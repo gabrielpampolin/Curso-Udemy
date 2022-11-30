@@ -22,11 +22,15 @@
     </div>
 
     <script>
-        function Caneta(preco, cor) {
+        let Caneta = (function(){
+            'use strict';
+            console.log(this);
+            function Caneta(preco, cor) {
 
+            //privado
             let color = cor || 'black'
+            //publicas
             this.preco = preco || 1;
-
             this.mudarCor = function(cor) {
                 if(cor !== 'red' && cor !== 'blue' && cor !== 'black') {
                     return;
@@ -39,11 +43,13 @@
             }
         }
 
-        let caneta1 = new Caneta(2, 'green');
-        caneta1.mudarCor('red');
-        // caneta1.preco = 2;
-        // caneta1.cor = 'green';
+        return Caneta;
+        })()
 
+        let caneta1 = new Caneta(2, 'green');
+            caneta1.mudarCor('red');
+            // caneta1.preco = 2;
+            // caneta1.cor = 'green';
     </script>
 </body>
 </html>
