@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap.css">
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap.min.css">
+    
+
+    <script src="../08javascript-DOM/beluga.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+    </div>
+
+    <script>
+        function Caneta(preco, cor) {
+
+            let color = cor || 'black'
+            this.preco = preco || 1;
+
+            this.mudarCor = function(cor) {
+                if(cor !== 'red' && cor !== 'blue' && cor !== 'black') {
+                    return;
+                }
+                color = cor;
+            }
+
+            this.pegaCor = function() {
+                return color;
+            }
+        }
+
+        let caneta1 = new Caneta(2, 'green');
+        caneta1.mudarCor('red');
+        // caneta1.preco = 2;
+        // caneta1.cor = 'green';
+
+    </script>
+</body>
+</html>
