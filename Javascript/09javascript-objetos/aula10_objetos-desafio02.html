@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap.css">
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../08javascript-DOM/css/bootstrap.min.css">
+    
+
+    <script src="../08javascript-DOM/beluga.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Curso Javascript</h1>
+    </div>
+
+    <script>
+        var Pessoa = function(nome, sobrenome) {
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+        }
+        
+        var pessoa1 = new Pessoa("Gabriel", "Pampolin Costa");
+        var pessoa2 = new Pessoa("José", "Geraldo");
+        var pessoa3 = new Pessoa("Maria", "Oliveira");
+        var pessoa4 = new Pessoa("Debora", "Santos");
+
+        var pessoas = [
+            pessoa1,
+            pessoa2,
+            pessoa3,
+            pessoa4
+        ]
+
+        var x = 0;
+        while(pessoas[x]) {
+            console.log(pessoas[x].nome + ' ' + pessoas[x].sobrenome);
+            x++;
+        }
+    </script>
+</body>
+</html>
