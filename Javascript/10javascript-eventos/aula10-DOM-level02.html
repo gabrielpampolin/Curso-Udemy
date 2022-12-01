@@ -73,17 +73,26 @@
         let $d1 = document.getElementById('d1');
         let $d1Span = document.querySelector('#d1 span');
 
-        $d1.addEventListener('click', function(){
+        $d1.addEventListener('click', function(e){
             console.log('click no $d1');
-        }, true)
+            e.stopPropagation();
+        }, false)
 
         $d1Span.addEventListener('click', function(){
             console.log('click no $d1span');
-        }, true)
+        }, false)
 
-        document.addEventListener('click', function(){
+        document.addEventListener('click', function(e){
+
             console.log('clicou no document');
-        }, true)
+
+            console.log(e.currentTarget);
+
+            console.log(e.target);
+
+            console.log(this);
+
+        }, false)
 
         
     </script>
