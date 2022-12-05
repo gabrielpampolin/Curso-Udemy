@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>curso de JS</h1>
+
+        <form action="#" method="post">
+            <label for="txtUser">Usuario: </label>
+            <input type="text" id="txtUser" name="user"><br>
+
+            <label for="txtPass">Senha: </label>
+            <input type="password" name="password" id="txtPass"><br>
+
+            <button type="submit" id="btn">Logar</button>
+            
+        </form>
+    </div>
+
+    <script>
+        (function(){
+            'use strict';
+            let $form = document.querySelector('form'); 
+            let $txtUser = document.getElementById('txtUser');
+            let $txtPass = document.getElementById('txtPass');
+            let $btn = document.getElementById('btn');
+
+            $form.addEventListener('submit', function(e){
+                if(!$txtUser.value || !$txtPass.value) {
+                    alert('Preencha todos os campos');
+                    e.preventDefault(); //não envia o form se algum campo estiver vazio
+                }
+            });
+
+
+        })()
+    </script>
+</body>
+</html>
