@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>curso de JS</h1>
+
+        <textarea id="msg" cols="50" rows="10"></textarea> <br>
+
+        Restam <span id="resta"></span> caracteres
+    </div>
+
+    <script>
+        (function(){
+            'use strict';
+            let maxima = 100;
+
+            let $txtMsg = document.getElementById('msg')
+            let $resta = document.getElementById('resta');
+
+            $resta.textContent = maxima;
+
+            $txtMsg.addEventListener('input', checkLength);
+
+            function checkLength(e) {
+                let numeroLetrasDigitadas = this.value.length;
+                $resta.textContent = maxima - numeroLetrasDigitadas;
+            }
+        })()
+    </script>
+</body>
+</html>
