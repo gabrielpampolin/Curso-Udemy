@@ -12,19 +12,25 @@
     <div class="container">
         <h1>curso de JS</h1>
 
-        <textarea id="msg" cols="50" rows="10"></textarea> <br>
+        <textarea id="msg" cols="50" rows="10" maxlength="200"></textarea> <br>
 
-        Restam <span id="resta"></span> caracteres
+        <div id="restaContainer" style="display: none;">Restam <span id="resta"></span> caracteres</div>
     </div>
 
     <script>
         (function(){
             'use strict';
-            let maxima = 100;
 
-            let $txtMsg = document.getElementById('msg')
+            let $txtMsg = document.getElementById('msg');
+
+            let $restaContainer = document.getElementById('restaContainer');
+
             let $resta = document.getElementById('resta');
 
+            let maxima = $txtMsg.maxLength;
+
+
+            $restaContainer.style.display = 'block';
             $resta.textContent = maxima;
 
             $txtMsg.addEventListener('input', checkLength);
