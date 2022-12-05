@@ -18,28 +18,34 @@
     </div>
 
     <script>
-        (function(){
-            'use strict';
+(function(){
+    'use strict';
 
-            let $txtMsg = document.getElementById('msg');
+    let $txtMsg = document.getElementById('msg');
+    let $restaContainer = document.getElementById('restaContainer');
+    let $resta = document.getElementById('resta');
+    let maxima = $txtMsg.maxLength;
 
-            let $restaContainer = document.getElementById('restaContainer');
+    function mostrarContainerResta() {
+        $restaContainer.style.display = 'block';
+    }
 
-            let $resta = document.getElementById('resta');
+    mostrarContainerResta();
+    mostrarCaracteresFaltantes(maxima);
 
-            let maxima = $txtMsg.maxLength;
+    $txtMsg.addEventListener('input', checkLength);
 
+    function checkLength(e) {
+        let numeroLetrasDigitadas = this.value.length;
+        let caracteresRestantes = parseInt(maxima) - parseInt(numeroLetrasDigitadas);
 
-            $restaContainer.style.display = 'block';
-            $resta.textContent = maxima;
+        mostrarCaracteresFaltantes(caracteresRestantes);
+    }
 
-            $txtMsg.addEventListener('input', checkLength);
-
-            function checkLength(e) {
-                let numeroLetrasDigitadas = this.value.length;
-                $resta.textContent = maxima - numeroLetrasDigitadas;
-            }
-        })()
+    function mostrarCaracteresFaltantes(n){
+        $resta.textContent = n;
+    }
+})()
     </script>
 </body>
 </html>
