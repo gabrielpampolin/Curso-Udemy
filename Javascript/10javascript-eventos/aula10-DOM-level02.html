@@ -37,6 +37,18 @@
         </div>
     </div>
 
+    <div class="container">
+        <h1>Delegação de eventos</h1>
+
+        <ul>
+            <li>lista 1</li>
+
+            <li>lista 2</li>
+
+            <li>lista 3</li>
+        </ul>
+    </div>
+
     <script>
         let btn2 = document.getElementById('btn2');
 
@@ -92,9 +104,35 @@
 
             console.log(this);
 
-        }, false)
+        }, false);
 
-        
+
+        let $ul = document.querySelector('ul');
+        let $lis = document.querySelectorAll('li');
+
+        // let x = 0;
+        // while($lis[x]) {
+        //     $lis[x].addEventListener('click', function(e){
+        //         e.stopPropagation();
+        //         console.log('clicou na li');
+        //     });
+        //     x++;
+        // }
+
+        $ul.addEventListener('click', function(e){
+            e.stopPropagation();
+            console.log(this);
+            console.log(e.currentTarget);
+            console.log(e.target);
+
+            console.log(e.target.nodeName);
+            if(e.target.nodeName === 'LI') {
+                alert('clicou na li');
+            }
+        }); 
+
+
+
     </script>
 </body>
 </html>
