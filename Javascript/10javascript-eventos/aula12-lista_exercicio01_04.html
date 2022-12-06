@@ -45,7 +45,7 @@
     });
 
     for(let i = 0; i < $lis.length; i++) {
-        $lis[i].addEventListener('click', toogleDone);
+        addEvent($lis[i]);
     }
 
     function toogleDone(){
@@ -54,15 +54,21 @@
 
     function addTask(){
     
-        let li = document.createElement('li');
-        let text = document.createTextNode($txtTask.value)
+        let li = document.createElement('li'); //crio uma li, uma memoria vazia.
+        let text = document.createTextNode($txtTask.value) //pego o valor da input
 
-        li.appendChild(text);
+        li.appendChild(text); //adiciono o valor da input na li
 
-        $ul.appendChild(li);
+        $ul.appendChild(li); //adiciono a li na ul, assim tornando-a vísivel. 
 
         $txtTask.value = '';
         $txtTask.focus();
+
+        addEvent(li);
+    }
+
+    function addEvent(li) {
+        li.addEventListener('click', toogleDone);
     }
     
 })()
