@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>curso de JS</h1>
+
+        <input type="text" id="txtTask">
+
+        <button id="btn">Cadastrar tarefa</button>
+
+        <ul>
+            <li>estudar Javascript - DOM</li>
+            <li>estudar eventos em javascript</li>
+            <li>jogar video-game</li>
+        </ul>
+    </div>
+
+    <script>
+(function(){
+    'use strict';
+    let $ul = document.querySelector('ul');
+    let $txtTask = document.getElementById('txtTask');
+    let $btn = document.getElementById('btn');
+
+    $btn.addEventListener('click', function(){
+        let task = '<li>' + $txtTask.value + '</li>';
+
+        $ul.innerHTML += task;
+
+        $txtTask.value = '';
+        $txtTask.focus();
+    });
+    
+})()
+    </script>
+</body>
+</html>
