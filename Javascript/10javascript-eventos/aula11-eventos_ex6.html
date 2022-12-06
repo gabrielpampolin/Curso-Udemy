@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>curso de JS</h1>
+
+        <button>botão 1</button>
+
+        <button>botão 2</button>
+
+        <button>botão 3</button>
+    </div>
+
+    <script>
+(function(){
+    'use strict';
+    let $btns = document.getElementsByTagName('button');
+
+    for(let i = 0; i < $btns.length; i++) {
+        $btns[i].addEventListener('click', clicou);
+    }
+
+    function clicou() {
+        console.log(this.textContent);
+    }
+})()
+    </script>
+</body>
+</html>
