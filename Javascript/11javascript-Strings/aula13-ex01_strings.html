@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    <script>
+        let nome = "Gabriel Pampolin Costa";
+
+        let nomeFormatado = formatarNome(nome);
+
+        function formatarNome(nome){
+            let posicaoUltimoEspaco = nome.lastIndexOf(' ');
+
+            if(posicaoUltimoEspaco <= 0) {
+                return nome;
+            } 
+
+            let ultimoNome = nome.slice(posicaoUltimoEspaco + 1);
+            console.log('ultimoNome', ultimoNome)
+            
+            let primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+            console.log('posicaoUltimoEspaco', posicaoUltimoEspaco)
+
+            return ultimoNome + ', ' + primeiroNome;
+        }
+
+        console.log(nomeFormatado);
+    </script>
+</head>
+
+<body>
+    <h1>Curso de JS</h1>
+</body>
+</html>
