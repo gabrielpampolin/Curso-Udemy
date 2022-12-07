@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    <script>
+        (function(){
+            window.addEventListener('load', init);
+
+            function init(){
+                let $paragrafos = document.querySelectorAll('p');
+
+                let x =0;
+                while($paragrafos[x]){
+                    $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML);
+                    x++;
+                }
+            }
+
+            function formatarTexto(texto) {
+                var numeroMaximoCaracteres = 50;
+                if(texto.length <= numeroMaximoCaracteres) {
+                    return texto; //se der errado retorna o texto normal
+                }
+
+                let subTexto = texto.slice(0, numeroMaximoCaracteres);
+                return subTexto + '...';
+            }
+        })()
+    </script>
+</head>
+
+<body>
+    <h1>Curso de JS</h1>
+
+    <p>Lorem ipsum <b>dolor, sit</b> amet consectetur adipisicing elit. Eligendi, nulla nostrum similique dolorem nihil voluptates quasi dolorum ullam delectus sequi ex ratione optio, maxime, libero architecto. Voluptates esse assumenda fugit?</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, nulla nostrum similique dolorem nihil voluptates quasi dolorum ullam delectus sequi ex ratione optio, maxime, libero architecto. Voluptates esse assumenda fugit?</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dicta nisi, odio autem neque perferendis aperiam nihil illum nesciunt, debitis distinctio odit perspiciatis beatae amet enim porro, eveniet nobis? Sed!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum ex delectus</p>
+    
+</body>
+</html>
