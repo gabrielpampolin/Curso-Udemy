@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    
+</head>
+
+<body>
+    <h1>Lógica de programação, curso JS.</h1>
+
+    <script>
+        // let arr = new Array(0,2,3, 'iio');
+
+        let arr = ['1',20,3,4,5, 'kjkj', 20, '30'];
+        
+        let numeros = arr.filter(function(el,i,arr){
+            return typeof el === 'number';
+        });
+
+        console.log(numeros);
+        numeros = numeros.map(function(el, i, arr){
+            return el * i; //faz a multiplicação dos elementos pelo indice
+        });
+        console.log(numeros);
+
+        var arr2 = arr.concat(numeros, 'ola', 'arr2', 100); //concatena uma array e elementos em outra
+        console.log(arr2);
+
+        let str = arr2.join();
+        console.log(str); //transforma a array em uma string igual ao toString
+
+        let str2 = arr2.join(' -- ');
+        //ele consegue passar parametro, ou seja essa é a diferença pro toString.
+        console.log(str2);
+        
+        arr.push('novo', 'item'); //método destrutivo, ele inclui elemento na array e retorna o novo length
+        console.log(arr);
+
+        let ultimoItem = arr.pop(); //também é destrutivo, armazena o ultimo item da array pra esse método
+        console.log(ultimoItem);
+        console.log(arr);
+
+        let primeiroItem = arr.shift(); //o oposto do pop, ele remove o primeiro item.
+        console.log(typeof primeiroItem);
+        console.log(arr);
+
+        arr.unshift(true, false, 'unshift');//acrescenta um elemento igual o push, porém no inicio.
+        console.log(arr);
+
+    </script>
+</body>
+</html>
