@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    
+</head>
+
+<body>
+    <h1>Lógica de programação, curso JS.</h1>
+
+    <script>
+        // let arr = new Array(0,2,3, 'iio');
+
+        let arr = ['1',20,3,4,5, 'kjkj', 20, '30'];
+        
+        let soNumeros = arr.every( function(el){
+            return typeof el === 'number';
+        } );
+        console.log(soNumeros); //só retorna true se todos forem verdadeiros
+
+        let aoMenosUmNumero = arr.some( function(el){
+            return typeof el === 'number';
+        } );
+        console.log(aoMenosUmNumero); //se 1 for verdadeiro então retorna true
+
+        let numeros = arr.filter(function(el, i, arr){
+            return typeof el === 'number';
+        });
+        console.log(numeros); // retorna somente os elementos que eu desejar, ele filtra.
+
+        // IMPORTANTE
+        arr.forEach(function(el, i, arr) {
+            console.log('el=', el,' | i=', i, ' | i -', arr.toString()); //um loop que mostra meus elementos da array, método muito importante.
+        });
+
+        let posicaoStr1 = arr.indexOf(20); //pega a posição de um elemento da array
+        console.log('posicaoStr1', posicaoStr1);
+        
+        let posicaoStr2 = arr.lastIndexOf(20 , 5); //pega a posição de um elemento da array, esse 5 depois quer dizer: procurar a partir do 5.
+        console.log('posicaoStr2', posicaoStr2);
+
+    </script>
+</body>
+</html>
