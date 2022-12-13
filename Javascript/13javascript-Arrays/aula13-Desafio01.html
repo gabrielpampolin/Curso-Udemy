@@ -94,9 +94,11 @@
         let tds = linhaAluno.querySelectorAll('td');
         let notas = recuperarNumerosDeColunas(tds);
 
-        let temZero = notas.some(function(nota){
-            return nota === 0;
-        });
+        // let temZero = notas.some(function(nota){
+        //     return nota === 0;
+        // });
+
+        let temZero = notas.some( nota => nota === 0 ); //a mesma coisa que a função acima
 
         let mensagem = temZero ? 'reprovado' : calcularMedia.apply(this, notas);;
 
