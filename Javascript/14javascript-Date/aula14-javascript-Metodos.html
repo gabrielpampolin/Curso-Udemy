@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+    
+</head>
+
+<body>
+    <h1>Lógica de programação, curso JS.</h1>
+
+    <script>
+        
+        let minhaData = new Date();
+
+        minhaData  //Data atual
+        minhaData.getDay() //dia da semana 0 Domingo 6 Sabado
+        minhaData.getDate() //dia do mês
+        minhaData.getMonth() //mês, 0 = janeiro, 11 = dezembro
+        minhaData.getYear() //número de anos após 1900
+        minhaData.getFullYear() //contagem após cristo
+        minhaData.getHours() 
+        minhaData.getMinutes()
+        minhaData.getSeconds() // a data na hora que eu instanciei o objeto, ou seja ela não é precisa.
+        minhaData.getTime() //número de milisegundos apartir de janeiro de 1970
+        new Date() // também retorna um time stemp igual o de cima.
+
+        minhaData.setTime(0) //não passou 1 milisegundo dês da data inicial ou seja dês de janeiro de 1970
+
+        minhaData.setDate(23) 
+        minhaData.setMonth(1)
+        minhaData.setYear(1970)
+
+
+        minhaData.setDate(14)
+        minhaData.setMonth(11)
+        minhaData.setYear(2022) //minha data atual
+        minhaData.setHours(14)
+        minhaData.setMinutes(11)
+
+        minhaData = new Date(0) // também vai para a data incial de 1970
+
+        minhaData = new Date(2022, 11, 14) //minha data
+
+        minhaData = new Date(2022, 11, 14, 14, 15, 30, 500) // data e horas exatas
+
+        minhaData = new Date("2022/12/14") //como string também vai a data exata, e o interpretador converte certo os meses do 1 - 12 (não recomendado usar)
+        
+        
+    </script>
+</body>
+</html>
