@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio horas</title>
+</head>
+
+<body>
+    <input type="text" id="cronometro">
+
+    <button id="iniciar">Iniciar</button>
+    <button id="pausar">Pausar</button>
+    <button id="parar">Parar</button>
+
+    <script>
+        (function(){
+            var $cronometro = document.getElementById('cronometro')
+            var $iniciar = document.getElementById('iniciar')
+            var $pausar = document.getElementById('pausar')
+            var $parar = document.getElementById('parar')
+        
+            $iniciar.addEventListener('click', iniciar);
+
+            $pausar.addEventListener('click', pausar);
+
+            $parar.addEventListener('click', parar);
+
+            var msClickIniciar = 0;
+            
+            function iniciar() {
+                msClickIniciar = Date.now();
+                iniciarCronometro();
+            }
+
+            function iniciarCronometro() {
+                setInterval(() => {
+                    var msAgora = Date.now();
+                    
+                    var diferenca = msAgora - msClickIniciar;
+
+                    $cronometro.value = diferenca;
+                }, 100);
+            }
+
+            function pausar() {
+
+            }
+
+            function parar(){
+
+            }
+
+        })();
+    </script>
+</body>
+</html>
