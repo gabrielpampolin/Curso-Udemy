@@ -41,8 +41,31 @@
                     
                     var diferenca = msAgora - msClickIniciar;
 
-                    $cronometro.value = diferenca;
+                    $cronometro.value = formataMs(diferenca);
                 }, 100);
+            }
+
+            function formataMs(ms) {
+                if(ms < 1000) {
+                    return ms;
+                } else if(ms < 60000) {
+                    var s = ms / 1000;
+                    s = parseInt(s);
+
+                    var c = ms - ( s * 1000 ); 
+
+                    return s + ":" + c;
+                } else {
+                    var m = ms / ( 60000 );
+                    m = parseInt(m);
+
+                    var s = ms / 1000 - ( m * 60 );
+                    s = parseInt(s);
+
+                    var c = ms - ( s * 1000 ) - ( m * 60 * 1000 );
+
+                    return m + ":" + s + ":" + c;
+                }
             }
 
             function pausar() {
