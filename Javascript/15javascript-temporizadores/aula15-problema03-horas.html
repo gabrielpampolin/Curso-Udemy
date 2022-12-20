@@ -35,29 +35,34 @@
             var rodando = false;
             
             function iniciar() {
+                if(rodando) return;
+                parar();
                 msClickIniciar = Date.now();
                 iniciarCronometro();
                 rodando = true;
             }
 
             function pausar() {
+                if(!$cronometro.value) return;
                 if(rodando) {
-                    rodando = false;
-
                     clearInterval(intervalo);
                     msClickPausar = Date.now();
 
                     msTempoDecorrido += (msClickPausar - msClickIniciar);
                 } else {
-                    rodando = true;
-
                     msClickIniciar = Date.now();
                     iniciarCronometro(msTempoDecorrido);
                 }
+                rodando = !rodando;
             }
 
             function parar(){
-
+                msClickPausar = 0;
+                msClickIniciar = 0;
+                msTempoDecorrido = 0;
+                rodando = false;
+                clearInterval(intervalo);
+                $cronometro.value = '';
             }
 
             function iniciarCronometro(tempoDecorrido) {
@@ -70,11 +75,13 @@
                     $cronometro.value = formataMs(diferenca + _ms);
                 }, 100);
             }
+            
+            const MINUTO = 60 * 1000;
 
             function formataMs(ms) {
                 if(ms < 1000) {
                     return ms;
-                } else if(ms < 60000) {
+                } else if(ms < MINUTO) {
                     var s = ms / 1000;
                     s = parseInt(s);
 
@@ -82,15 +89,10 @@
 
                     return s + ":" + c;
                 } else {
-                    var m = ms / ( 60000 );
+                    var m = ms / ( MINUTO );
                     m = parseInt(m);
 
-                    var s = ms / 1000 - ( m * 60 );
-                    s = parseInt(s);
-
-                    var c = ms - ( s * 1000 ) - ( m * 60 * 1000 );
-
-                    return m + ":" + s + ":" + c;
+                    return m + ":" + formataMs( ms - m * MINUTO )
                 }
             }
         })();
