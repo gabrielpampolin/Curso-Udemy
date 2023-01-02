@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM eventos</title>
+</head>
+
+<body>
+   <h1>BOM eventos</h1>
+
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure, aliquid sequi atque, mollitia, possimus ad velit hic esse eos molestiae sint? Possimus itaque soluta, impedit asperiores eos quidem architecto?</p>
+   
+   <script>
+
+        window.addEventListener('load', function(){
+            console.log('load disparado');
+        });
+
+        window.addEventListener('DOMContentLoaded', function(){
+            console.log('DOMContentLoaded disparado');
+        });
+
+        window.addEventListener('resize', function(e){
+            console.log('resize disparado');
+            console.log(e);
+        });
+
+        window.addEventListener('scroll', function(e){
+            console.log('scroll disparado');
+            console.log(e);
+
+            console.log('scroll Y', pageYOffset);
+        });
+        window.addEventListener('unload', function(){
+            console.log('unload disparado');
+            debugger;
+        });
+
+        window.addEventListener('beforeunload', function(){
+            console.log('beforeunload disparado');
+            debugger;
+        });
+
+   </script>
+</body>
+
+</html>
