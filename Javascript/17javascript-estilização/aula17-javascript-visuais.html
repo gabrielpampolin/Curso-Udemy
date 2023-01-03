@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM eventos</title>
+
+    <style>
+        .teste {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+   <h1>BOM eventos</h1>
+
+    <div class="teste" style="background: green;">
+        apenas um teste
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolore ea vel ab magnam debitis id fugit quidem ut amet harum assumenda, nesciunt ducimus recusandae laboriosam doloremque maiores sit quam.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum totam voluptatibus eos libero quod iusto sit tenetur, ipsam, quisquam incidunt provident nam, ipsum et a! Dolor placeat possimus animi.</p>
+
+    <div class="teste2">teste 2</div>
+
+   <script>
+
+        var $teste = document.querySelector('.teste');
+
+        console.log('bg', $teste.style.background); //so recupera estilos inline
+
+        console.log('computado: ', getComputedStyle($teste).background)
+
+        var $p = document.querySelector('p');
+        console.log($p.offsetHeight, $p.offsetWidth);
+        console.log($p.offsetLeft, $p.offsetTop);
+
+        var $teste2 = document.querySelector('.teste2');
+
+        console.log($teste2.offsetLeft, $p.offsetTop);
+
+        console.log($teste2.getBoundingClientRect())
+   </script>
+</body>
+
+</html>
